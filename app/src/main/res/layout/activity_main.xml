@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".MainActivity">
+
+
+    <include
+        android:id="@+id/mainToolbar"
+        layout="@layout/toolbar_layout" />
+
+    <TextView
+        android:id="@+id/locationTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Melbourne, AU"
+        android:textSize="36sp"
+        android:gravity="center"
+        android:layout_below="@+id/mainToolbar"/>
+
+    <FrameLayout
+        layout="@layout/single_date_layout"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/fragment_container"
+        android:layout_below="@id/locationTV"
+        />
+
+
+    <include
+        layout="@layout/bottom_nav_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-6dp" />
+
+</RelativeLayout>
